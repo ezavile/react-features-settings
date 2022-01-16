@@ -1,0 +1,23 @@
+.GroupFeatures {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.GroupFeatures-title {
+  text-transform: uppercase;
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .GroupFeatures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .GroupFeatures {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
