@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'industry';
+  src: url('./assets/fonts/industry.eot');
+  src: local('industry'),
+      url('./assets/fonts/industry.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/industry.woff') format('woff'),
+      url('./assets/fonts/industry.ttf') format('truetype');
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #0d0d0f;
+  color: #bebfc0;
+  font-family: 'industry';
+  padding: 2.25rem 1.5rem;
 }
