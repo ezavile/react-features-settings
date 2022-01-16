@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
-import { Switch } from "./Atoms";
+
+import { Switch, FeatureName } from "./Atoms";
 
 export const App: FC = () => {
   const [on, setOn] = useState(false);
@@ -7,6 +8,7 @@ export const App: FC = () => {
   return (
     <div className="App">
       <Switch on={on} onChange={() => setOn(!on)} />
+      <FeatureName name={"notifications"} />
     </div>
   );
 };
