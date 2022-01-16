@@ -1,0 +1,15 @@
+.FeatureToggle {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.FeatureToggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.FeatureToggle-switch input {
+  margin-right: 1rem;
+}

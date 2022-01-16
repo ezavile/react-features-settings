@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 
-import { Switch, FeatureName, NumericInput, ChevronButton, Card } from "./Atoms";
+import { Card } from "./Atoms";
+import { FeatureToggle } from "./Molecules";
 
 export const App: FC = () => {
   const [on, setOn] = useState(false);
@@ -8,10 +9,12 @@ export const App: FC = () => {
   return (
     <div className="App">
       <Card>
-        <Switch on={on} onChange={() => setOn(!on)} />
-        <FeatureName name={"notifications"} />
-        <NumericInput />
-        <ChevronButton on={on} onClick={() => setOn(!on)} />
+        <FeatureToggle
+          name={"notifications"}
+          enabled={on}
+          onToggle={() => setOn(!on)}
+          onLimitValueChange={() => {}}
+        />
       </Card>
     </div>
   );
