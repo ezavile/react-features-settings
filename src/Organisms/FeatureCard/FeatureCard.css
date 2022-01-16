@@ -1,0 +1,17 @@
+.FeatureCard-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FeatureCard-list {
+  margin-left: 1.5rem;
+  margin-right: 2.45rem;
+}
+
+.FeatureCard-list-item {
+  margin: 1rem 0;
+}
+
+.FeatureCard-list-item:last-child {
+  margin-bottom: 0;
+}
