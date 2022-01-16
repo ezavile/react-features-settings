@@ -5,10 +5,13 @@ import "reset-css";
 import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { FeatureProvider } from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FeatureProvider>
+      <App />
+    </FeatureProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

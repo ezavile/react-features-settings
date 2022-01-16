@@ -1,21 +1,17 @@
-import { FC, useState } from "react";
+import { FC } from "react";
+import { GroupFeatures } from "./Organisms";
+import { useFeatureContext } from "./store";
 
-import { Card } from "./Atoms";
-import { FeatureToggle } from "./Molecules";
-
-export const App: FC = () => {
-  const [on, setOn] = useState(false);
+export const App: FC<{}> = () => {
+  const { state } = useFeatureContext();
 
   return (
-    <div className="App">
-      <Card>
-        <FeatureToggle
-          name={"notifications"}
-          enabled={on}
-          onToggle={() => setOn(!on)}
-          onLimitValueChange={() => {}}
-        />
-      </Card>
-    </div>
+    <>
+      {Object.keys(state).map((groupKey) => {
+        const group = state[groupKey];
+
+        return <GroupFeatures key={group.id} {...group} />;
+      })}
+    </>
   );
 };
