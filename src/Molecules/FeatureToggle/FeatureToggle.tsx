@@ -2,11 +2,9 @@ import { FC } from "react";
 import "./FeatureToggle.css";
 
 import { FeatureName, NumericInput, Switch } from "../../Atoms";
+import { Feature } from "../../store";
 
-type FeatureToggleProps = {
-  name: string;
-  enabled: boolean;
-  value?: number;
+type FeatureToggleProps = Pick<Feature, 'name' | 'enabled' | 'value'> & {
   onToggle: () => void;
   onLimitValueChange: (value: number) => void;
 };
