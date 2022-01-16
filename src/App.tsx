@@ -1,9 +1,12 @@
-import { FC } from "react"
+import { FC, useState } from "react";
+import { Switch } from "./Atoms";
 
 export const App: FC = () => {
+  const [on, setOn] = useState(false);
+
   return (
     <div className="App">
-      Hello world
+      <Switch on={on} onChange={() => setOn(!on)} />
     </div>
-  )
-}
+  );
+};
